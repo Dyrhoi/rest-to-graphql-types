@@ -1,15 +1,17 @@
 import axios from "axios"
 import { API } from "./lib/helpers/api"
-import { saveGraphQLType } from "./lib/helpers/graphql";
+import {initSetupSync, saveGraphQLType } from "./lib/helpers/graphql";
 
 const paths = [
     "/your-path",
     "/your-path/other",
 ]
 
+initSetupSync();
 generate(paths);
 
 async function generate(paths: Array<string>) {
+
     const pathsAmount = paths.length;
     let pathsRemaning = 0;
 
