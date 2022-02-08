@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "types": ["node"],
+      "lib": [
+        "ES2021.String"
+      ]
+    }
+  }
