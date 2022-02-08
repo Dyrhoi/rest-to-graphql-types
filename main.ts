@@ -21,7 +21,7 @@ async function generate(paths: Array<string>) {
             await saveGraphQLType(path, JSON.stringify(response.data));
         } catch(err) {
             axios.isAxiosError(err) && err.response ? 
-                console.error("Error loading path, returned: ", err.code) :
+                console.error(`Error loading path [${path}], returned: `, err.response.status) :
                 console.error(`Unknon error occured loading ${path}`, err.code)
 
             console.debug(err)
